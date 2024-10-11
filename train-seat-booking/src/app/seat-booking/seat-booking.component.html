@@ -1,0 +1,10 @@
+<div>
+  <h1>Book Seats</h1>
+  <input type="number" [(ngModel)]="numberOfSeatsToBook" min="1" max="7" placeholder="Number of seats to book">
+  <button (click)="bookSeats()">Book</button>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  <div *ngIf="bookedSeats.length > 0">
+    <h2>Booked Seats:</h2>
+    <p>{{ bookedSeats.join(', ') }}</p>
+  </div>
+</div>

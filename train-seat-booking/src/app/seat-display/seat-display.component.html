@@ -1,0 +1,8 @@
+<div>
+  <h2>Seat Status</h2>
+  <ul>
+    <li *ngFor="let seat of seats">
+      Seat {{ seat.number }} - {{ seat.booked ? 'Booked' : 'Available' }}
+    </li>
+  </ul>
+</div>

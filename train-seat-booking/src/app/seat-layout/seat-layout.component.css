@@ -1,0 +1,169 @@
+/* General Layout */
+.seat-layout {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    background: linear-gradient(145deg, #f0f0f0, #fafafa);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    margin: 50px auto;
+    transition: all 0.3s ease;
+}
+
+/* Headers */
+h2 {
+    color: #222;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Seat Rows */
+.rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+/* Seat Styles */
+.seat {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.seat:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Available and Booked Seats */
+.available {
+    background-color: #28a745;
+    border-color: #218838;
+}
+
+.booked {
+    background-color: #dc3545;
+    border-color: #c82333;
+}
+
+/* Beautified Booking Form */
+.booking-form {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.booking-form label {
+    font-weight: 600;
+    font-size: 18px;
+    color: #343a40;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.booking-form input {
+    width: 80px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.booking-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.booking-form button {
+    padding: 12px 30px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #218838;
+}
+
+
+/* Adjusted spacing between the input and button */
+.button-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.booking-form button {
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Booked Seats */
+.booked-seats {
+    margin-top: 25px;
+}
+
+.booked-seats h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.booked-seats p {
+    color: #666;
+    font-size: 16px;
+}

@@ -1,0 +1,21 @@
+.coach {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .coach div {
+    display: flex;
+  }
+  
+  .coach div div {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #000;
+  }
+  
+  .coach div div.booked {
+    background-color: red;
+  }
