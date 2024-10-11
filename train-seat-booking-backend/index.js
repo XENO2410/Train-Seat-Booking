@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Use the port provided by Render
 
 // Middleware
 app.use(bodyParser.json());
@@ -13,11 +13,11 @@ app.use(cors());
 
 // MySQL connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root', // Your MySQL username
-    password: 'Vva9cem4cc***', // Your MySQL password
-    database: 'train_seat_booking',
-    port: 3306 // Default MySQL port
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root', // Your MySQL username
+    password: process.env.DB_PASSWORD || 'Vva9cem4cc***', // Your MySQL password
+    database: process.env.DB_NAME || 'train_seat_booking',
+    port: process.env.DB_PORT || 3306 // Default MySQL port
 });
 
 db.connect((err) => {
