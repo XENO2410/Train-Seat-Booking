@@ -141,29 +141,3 @@ This project is deployed on Render. Follow these steps to deploy your own versio
 ### Database
 
 The MySQL database is hosted on Cloud Clever. Ensure your database credentials are correctly configured in the backend.
-
-## Contributing
-
-Contributions are welcome! Please follow these steps to contribute:
-
-1. **Fork the repository**.
-2. **Create a new branch**:
-
-   ```bash
-   git checkout -b feature/YourFeatureName
-   ```
-
-3. **Make your changes**.
-4. **Commit your changes**:
-
-   ```bash
-   git commit -m 'Add some feature'
-   ```
-
-5. **Push to the branch**:
-
-   ```bash
-   git push origin feature/YourFeatureName
-   ```
-
-6. **Open a pull request**.
