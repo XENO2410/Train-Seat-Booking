@@ -12,21 +12,37 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MySQL connection
-const db = mysql.createConnection({
-    host: process.env.DB_HOST || 'bk5rl7jcchxvsn1b5lfh-mysql.services.clever-cloud.com',
-    user: process.env.DB_USER || 'uyb7ffg7pcft34zw', // Your MySQL username
-    password: process.env.DB_PASSWORD || 'v8W5DJg98hP30ntpPVZt', // Your MySQL password
-    database: process.env.DB_NAME || 'bk5rl7jcchxvsn1b5lfh',
-    port: process.env.DB_PORT || 3306 // Default MySQL port
-});
+let db;
 
-db.connect((err) => {
-    if (err) {
-        console.error('Error connecting to MySQL:', err);
-        return;
-    }
-    console.log('Connected to MySQL');
-});
+function handleDisconnect() {
+    db = mysql.createConnection({
+        host: process.env.DB_HOST || 'bk5rl7jcchxvsn1b5lfh-mysql.services.clever-cloud.com',
+        user: process.env.DB_USER || 'uyb7ffg7pcft34zw', // Your MySQL username
+        password: process.env.DB_PASSWORD || 'v8W5DJg98hP30ntpPVZt', // Your MySQL password
+        database: process.env.DB_NAME || 'bk5rl7jcchxvsn1b5lfh',
+        port: process.env.DB_PORT || 3306 // Default MySQL port
+    });
+
+    db.connect((err) => {
+        if (err) {
+            console.error('Error connecting to MySQL:', err);
+            setTimeout(handleDisconnect, 2000); // Reconnect after 2 seconds
+        } else {
+            console.log('Connected to MySQL');
+        }
+    });
+
+    db.on('error', (err) => {
+        console.error('MySQL error:', err);
+        if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+            handleDisconnect();
+        } else {
+            throw err;
+        }
+    });
+}
+
+handleDisconnect();
 
 // Root route
 app.get('/', (req, res) => {
