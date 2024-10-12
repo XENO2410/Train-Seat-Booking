@@ -1,27 +1,26 @@
 <div class="seat-layout">
-    <h2>Seat Layout</h2>
-    <div class="rows">
+  <h2>Seat Layout</h2>
+  <div class="rows">
       <div *ngFor="let row of rows" class="row">
-        <div *ngFor="let seat of row" [ngClass]="getSeatClass(seat)" class="seat">
-          {{ seat.number }}
-        </div>
+          <div *ngFor="let seat of row" [ngClass]="getSeatClass(seat)" class="seat">
+              {{ seat.number }}
+          </div>
       </div>
-    </div>
+  </div>
 
-    <div class="booking-form">
-        <label for="numberOfSeats">Number of Seats to Book:</label>
-        <div class="input-container">
-            <input type="number" id="numberOfSeats" [(ngModel)]="numberOfSeatsToBook" />
-        </div>
-        <div class="button-container">
-            <button (click)="bookSeats()">Book</button>
-        </div>
-    </div>
-    
+  <div class="booking-form">
+      <label for="numberOfSeats">Number of Seats to Book:</label>
+      <div class="input-container">
+          <input type="number" id="numberOfSeats" [(ngModel)]="numberOfSeatsToBook" />
+      </div>
+      <div class="button-container">
+          <button (click)="bookSeats()">Book</button>
+      </div>
+  </div>
 
-    <div class="booked-seats">
+  <div class="booked-seats">
       <h3>Booked Seats:</h3>
       <p *ngIf="bookedSeats.length === 0">No seats booked yet.</p>
       <p *ngIf="bookedSeats.length > 0">{{ bookedSeats.join(', ') }}</p>
-    </div>
   </div>
+</div>

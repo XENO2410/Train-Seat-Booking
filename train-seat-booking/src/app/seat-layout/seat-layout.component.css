@@ -129,7 +129,6 @@ h2 {
     background-color: #218838;
 }
 
-
 /* Adjusted spacing between the input and button */
 .button-container {
     margin-top: 15px;
@@ -166,4 +165,79 @@ h2 {
 .booked-seats p {
     color: #666;
     font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .seat-layout {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .seat {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .booking-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .booking-form input {
+        width: 60px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .booking-form button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .booked-seats h3 {
+        font-size: 16px;
+    }
+
+    .booked-seats p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .seat-layout {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .seat {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .booking-form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .booking-form input {
+        width: 50px;
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .booking-form button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .booked-seats h3 {
+        font-size: 14px;
+    }
+
+    .booked-seats p {
+        font-size: 12px;
+    }
 }
