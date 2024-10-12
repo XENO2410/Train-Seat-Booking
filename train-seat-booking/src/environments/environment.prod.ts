@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'http://localhost:3000/api' // Update this to your production backend API URL
+    apiUrl: 'https://train-seat-booking-mmqj.onrender.com/api' // Update this to your production backend API URL
   };
