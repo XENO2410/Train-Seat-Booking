@@ -16,11 +16,11 @@ let db;
 
 function handleDisconnect() {
     db = mysql.createConnection({
-        host: process.env.DB_HOST || 'bk5rl7jcchxvsn1b5lfh-mysql.services.clever-cloud.com',
-        user: process.env.DB_USER || 'uyb7ffg7pcft34zw', // Your MySQL username
-        password: process.env.DB_PASSWORD || 'v8W5DJg98hP30ntpPVZt', // Your MySQL password
-        database: process.env.DB_NAME || 'bk5rl7jcchxvsn1b5lfh',
-        port: process.env.DB_PORT || 3306 // Default MySQL port
+        host: process.env.DB_HOST ,
+        user: process.env.DB_USER , // Your MySQL username
+        password: process.env.DB_PASSWORD , // Your MySQL password
+        database: process.env.DB_NAME,
+        port: process.env.DB_PORT // Default MySQL port
     });
 
     db.connect((err) => {
