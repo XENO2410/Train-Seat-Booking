@@ -9,8 +9,6 @@ Train Seat Booking is a web application that allows users to book seats on a tra
 - [Installation](#installation)
 - [Usage](#usage)
 - [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Problem Description
 
