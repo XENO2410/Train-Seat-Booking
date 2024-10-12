@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 3000; // Use the port provided by Render
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
@@ -13,10 +13,10 @@ app.use(cors());
 
 // MySQL connection
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root', // Your MySQL username
-    password: process.env.DB_PASSWORD || 'Vva9cem4cc***', // Your MySQL password
-    database: process.env.DB_NAME || 'train_seat_booking',
+    host: process.env.DB_HOST || 'bk5rl7jcchxvsn1b5lfh-mysql.services.clever-cloud.com',
+    user: process.env.DB_USER || 'uyb7ffg7pcft34zw', // Your MySQL username
+    password: process.env.DB_PASSWORD || 'v8W5DJg98hP30ntpPVZt', // Your MySQL password
+    database: process.env.DB_NAME || 'bk5rl7jcchxvsn1b5lfh',
     port: process.env.DB_PORT || 3306 // Default MySQL port
 });
 
